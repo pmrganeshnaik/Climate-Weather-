@@ -73,7 +73,7 @@ body {
   color: white;
   font-size: 1rem;
   position: relative;
-  right: 4px;
+  right: 4.3px;
 }
 
 .weather-Report {
@@ -239,7 +239,7 @@ body {
   }
 
   .navbar .search #submit{
-    padding-top: 12.5px ;
+    padding-top: 12.1px ;
   }
 
   .weather-Report {
@@ -269,7 +269,7 @@ body {
   
   .weather-container .temperature .celsius #num-cel {
     position: absolute;
-    left: 250px;
+    left: 240px;
     top: 600px;
   }
 
