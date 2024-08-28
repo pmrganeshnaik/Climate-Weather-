@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Climate Weather</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=New+Amsterdam&family=Six+Caps&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Moderustic:wght@300..800&family=New+Amsterdam&family=Six+Caps&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jersey+10&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Moderustic:wght@300..800&family=New+Amsterdam&family=Six+Caps&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="mini-container">
+        <!-- Navbar -->
+        <div class="main-nav">
+          <div class="navbar">
+            <div class="logo">
+              <img src="/images/Navbar logo.png" alt="Logo BG" />
+            </div>
+              <form action="/submit" method="post">
+                <div class="search">
+                  <input type="input" name="search" id="search" required/>
+                  <input type="submit" id="submit" value="Submit">
+                </div>
+              </form>
+            <div class="location">
+              <p>
+                <%= city_name %>,&nbsp;<%= state_name %> , <%= country_name %>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Weather Report -->
+        <div class="weather-Report">
+          <!-- Current -->
+          <div class="current-container">
+            <h2>Current Weather</h2>
+            <p id="time"><%= time %></p>
+            <p>Data:<%= date %></p>
+            <p>Sunrise: <%= sunrise %></p>
+            <p>Sunset: <%= sunset %></p>
+          </div>
+
+          <!-- Weather -->
+          <div class="weather-container">
+            <div class="temperature">
+              <div class="mood">
+                <img src="/images/Sun colud.png" />
+              </div>
+              <div class="celsius">
+                <h1 id="num-cel"><%= temp %></h1>
+                <p id="deg">C°</p>
+                <p id="env">Could</p>
+              </div>
+            </div>
+            <div class="additional-info">
+              <p>Feel Like <br /><span><%= feels_like %>&deg;C</span></p>
+              <p>Humidity<br /><span><%= humidity %> %</span></p>
+              <p>Pressure<br /><span><%= pressure %> mb</span></p>
+              <p>Visibility<br /><span><%= visibility %> km</span></p>
+              <p>Speed<br /><span><%= speed %> MPH</span></p>
+              <p>Sea Level<br /><span><%= sea_level%> mb</span></p>
+              <p>Grnd Level<br /><span><%= grnd_level %> mb</span></p>
+              <p>Degree<br /><span><%= deg%>&deg;</span></p>
+            </div>
+          </div>
+
+          <!-- Map -->
+          <div class="map-container">
+          
+            <img id="" src="/images/G-Map-2.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
